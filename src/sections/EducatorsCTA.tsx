@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -26,12 +25,17 @@ const EducatorsCTA = () => {
                 <p className="text-gray-500 text-lg mb-8 leading-relaxed">
                     Your experience is invaluable. Return to the classroom on your own terms and continue to make an impact in students' lives. We offer flexible schedules that work for you.
                 </p>
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white gap-2 w-fit px-8" asChild>
-                    <Link to="/apply">
-                        Apply Today
-                        <ArrowRight size={18} />
-                    </Link>
-                </Button>
+                <a 
+                  href="https://firsthand-education.zohorecruit.com/jobs/Careers" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-fit"
+                >
+                  <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white gap-2 px-8">
+                    Apply Today
+                    <ArrowRight size={18} />
+                  </Button>
+                </a>
             </motion.div>
           </div>
           

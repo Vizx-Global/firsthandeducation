@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '@/components/HeaderTwo';
-import CareerPage from './components/CareerPage';
-import Footer from '@/components/Footer';
+import Header from '@/layout/Header';
+import CareerPage from '@/pages/Careers/components/CareerPage';
+import Footer from '@/layout/Footer';
 
 export default function Index() {
   return (

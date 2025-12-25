@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '@/components/HeaderTwo';
-import Footer from '@/components/Footer';
-import ContactPage from './component/ContactPage';
+import Header from '@/layout/Header';
+import Footer from '@/layout/Footer';
+import ContactPage from '@/pages/Contact/component/ContactPage';
 
 export default function Index() {
   return (

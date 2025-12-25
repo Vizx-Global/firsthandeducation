@@ -1,13 +1,14 @@
 import React from 'react'
-import Header from '@/components/HeaderTwo';
-import MedicalStaffingPage from './components/MedicalStaffing';
+import Header from '@/layout/Header';
 import Footer from '@/components/Footer';
+import RequestSub from './Components/RequestPage';
+
 export default function Index() {
   return (
-    <div className='min-h-screen bg-background'>
+    <div>
         <Header/>
         <main>
-            <MedicalStaffingPage/>
+            <RequestSub/>
         </main>
         <Footer/>
     </div>

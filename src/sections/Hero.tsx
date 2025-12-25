@@ -1,13 +1,19 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import heroBg from "@/assets/hero-classroom.png";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const { scrollY } = useScroll();
   const yBackend = useTransform(scrollY, [0, 500], [0, 250]); 
   const opacityText = useTransform(scrollY, [0, 300], [1, 0]);
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-gray-900 flex items-center justify-center">
@@ -34,8 +40,8 @@ const Hero = () => {
             style={{ opacity: opacityText }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
-              You’re The <span className="text-red-500">Guest Teacher</span> <br />
-              We’ve Been Looking For…
+              You're The <span className="text-red-500">Guest Teacher</span> <br />
+              We've Been Looking For…
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
@@ -44,21 +50,29 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button 
-                size="lg" 
-                className="bg-red-600 hover:bg-red-700 text-white px-8 h-14 rounded-full text-lg shadow-xl shadow-red-900/20 group w-full sm:w-auto"
+              <a 
+                href="https://firsthand-education.zohorecruit.com/jobs/Careers" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                Apply Now
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 h-14 rounded-full text-lg shadow-xl shadow-red-900/20 group w-full"
+                >
+                  Apply Now
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-white/20 text-white bg-white/10 px-8 h-14 rounded-full text-lg w-full sm:w-auto"
+                onClick={handleContactClick}
+                className="border-white/20 text-white bg-white/10 px-8 h-14 rounded-full text-lg w-full sm:w-auto hover:bg-white/20 transition-colors"
               >
-                <PlayCircle className="mr-2 w-5 h-5" />
-                Watch Video
+                <MessageCircle className="mr-2 w-5 h-5" />
+                Contact Us
               </Button>
             </div>
           </motion.div>

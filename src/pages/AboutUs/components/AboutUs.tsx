@@ -23,7 +23,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useNavigate } from "react-router-dom";
-import aboutUsImage from '@/assets/FirstHandHero3.jpg';
+import aboutUsImage from '@/assets/education_service.png';
 
 const AboutUsPage = () => {
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ const AboutUsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/30">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-28 bg-gradient-to-r from-blue-900 to-indigo-900 text-white overflow-hidden">
+      <section className="relative py-20 lg:py-28 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-72 h-72 bg-corporate-red/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
